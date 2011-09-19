@@ -7,5 +7,6 @@
 \def\exp#1{{\textrm{exp}\paren{#1}}}
 \def\poly#1{{\textrm{poly}\paren{#1}}}
 
-\def\cc#1{{\mathsf{#1}}}
-\def\sp#1{{\cc{SPACE}(#1)}}
+\def\cc#1{{\mathsf{#1}}} % complexity class
+\def\sp#1{{\cc{SPACE}(#1)}} % space
+\def\advice#1#2{\cc{#1}_\textnormal{/#2}} % e.g. P/poly
