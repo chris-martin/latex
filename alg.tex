@@ -1,0 +1,24 @@
+\newcounter{algcounter}
+
+\newlength{\algskip}
+\newlength{\algskipb}
+
+\newenvironment{alg}{
+  \begin{list}{\arabic{algcounter}.~}{\usecounter{algcounter}\leftmargin=25pt}
+  \setlength{\algskip}{0pt}
+  \setlength{\algskipb}{5pt}
+  \let\olditem\item
+  \renewcommand\item{
+    \setlength{\labelsep}{\algskipb}
+    \setlength{\itemindent}{\algskip}
+    \setlength{\listparindent}{\algskip}
+    \olditem
+  }
+}{\end{list}}
+
+\newcommand\algindent[1]{{
+  \addtolength{\algskip}{25pt}
+  \addtolength{\algskipb}{25pt}
+  #1
+}}
+
