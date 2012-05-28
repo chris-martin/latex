@@ -1,4 +1,5 @@
 % Python listing setup
+% http://licejus.lt/~gintas/files/pythonlisting.tex
 
 \usepackage{color}
 \usepackage[procnames]{listings}
@@ -9,22 +10,26 @@
 \renewcommand{\lstlistingname}{Code Listing}
 \definecolor{gray}{gray}{0.5}
 \definecolor{green}{rgb}{0,0.5,0}
+\definecolor{darkgreen}{rgb}{0,0.2,0}
 \definecolor{lightgreen}{rgb}{0,0.7,0}
-\definecolor{purple}{rgb}{0.5,0,0.5}
+\definecolor{darkpurple}{rgb}{0.2,0,0.2}
 \definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkorange}{rgb}{0.4,0.1,0}
+\definecolor{lightblue}{rgb}{0.8,0.8,1}
+\definecolor{darkblue}{rgb}{0,0,0.2}
 \lstnewenvironment{python}[1][]{
 \lstset{
 language=python,
 basicstyle=\ttfamily\small\setstretch{1},
-stringstyle=\color{green},
+stringstyle=\color{darkgreen},
 showstringspaces=false,
 alsoletter={1234567890},
 otherkeywords={\ , \}, \{},
-keywordstyle=\color{blue},
+keywordstyle=\color{darkblue},
 emph={access,and,as,break,class,continue,def,del,elif,else,%
 except,exec,finally,for,from,global,if,import,in,is,%
 lambda,not,or,pass,print,raise,return,try,while,assert},
-emphstyle=\color{orange}\bfseries,
+emphstyle=\color{darkorange}\bfseries,
 emph={[2]self},
 emphstyle=[2]\color{gray},
 emph={[4]ArithmeticError,AssertionError,AttributeError,BaseException,%
@@ -46,15 +51,15 @@ license,list,locals,long,map,max,min,object,oct,open,ord,pow,property,%
 quit,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,%
 slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,%
 vars,xrange,zip},
-emphstyle=[4]\color{purple}\bfseries,
+emphstyle=[4]\color{darkpurple}\bfseries,
 upquote=true,
-morecomment=[s][\color{lightgreen}]{"""}{"""},
+morecomment=[s][\color{green}]{"""}{"""},
 commentstyle=\color{red}\slshape,
 literate={>>>}{\textbf{\textcolor{darkred}{>{>}>}}}3%
          {...}{{\textcolor{gray}{...}}}3,
 procnamekeys={def,class},
-procnamestyle=\color{blue}\textbf,
+procnamestyle=\color{darkblue}\textbf,
 framexleftmargin=1mm, framextopmargin=1mm, frame=shadowbox,
-rulesepcolor=\color{blue},#1
+rulesepcolor=\color{lightblue},#1
 }}{}
 
